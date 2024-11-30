@@ -1,0 +1,40 @@
+Arquivo: vulnerabilidades.txt
+
+# Vulnerabilidades Conhecidas no Projeto FutSecreto
+
+Durante o desenvolvimento do projeto, as seguintes vulnerabilidades foram identificadas:
+
+1. Vulnerabilidade: `nth-check`
+   - **Severidade**: Alta
+   - **Descrição**: Inefficient Regular Expression Complexity.
+   - **Dependência Afetada**: `react-scripts` via `@svgr/webpack`.
+   - **Correção Sugerida**: Atualizar `react-scripts` para `3.0.1` ou superior.
+   - **Impacto**: Pode causar alterações no código (breaking changes).
+   - **Status**: Não corrigido, aguardando estabilização do projeto.
+
+2. Vulnerabilidade: `postcss`
+   - **Severidade**: Moderada
+   - **Descrição**: PostCSS line return parsing error.
+   - **Dependência Afetada**: `resolve-url-loader` via `react-scripts`.
+   - **Correção Sugerida**: Atualizar `resolve-url-loader` ou `react-scripts` para uma versão mais recente.
+   - **Impacto**: Pode exigir ajustes no projeto.
+   - **Status**: Não corrigido, monitorando atualizações futuras.
+
+---
+
+## Plano de Ação:
+1. **Monitorar Atualizações**:
+   - Executar `npm audit` regularmente para verificar se as vulnerabilidades foram corrigidas em novas versões.
+
+2. **Correção Planejada**:
+   - Revisar a dependência `react-scripts` e seu impacto antes de corrigir.
+   - Testar as atualizações em um ambiente isolado para evitar problemas no projeto atual.
+
+3. **Antes da Publicação**:
+   - Garantir que todas as vulnerabilidades sejam corrigidas antes de colocar o projeto em produção.
+
+---
+
+# Observação:
+Essas vulnerabilidades foram registradas com base no relatório `npm audit` gerado durante o desenvolvimento.
+Elas não afetam diretamente as funcionalidades principais do projeto no momento.
